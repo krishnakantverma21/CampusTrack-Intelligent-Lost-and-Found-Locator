@@ -1,0 +1,6 @@
+com\loginform\config\SecurityConfig.class
+com\loginform\repository\UserRepository.class
+com\loginform\LoginFormBackendApplication.class
+com\loginform\controller\AuthController.class
+com\loginform\service\AuthService.class
+com\loginform\entity\User.class
