@@ -1,0 +1,89 @@
+.section-header.gradient-header {
+  background: linear-gradient(to right, #b2ebf2, #ce93d8);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #4a148c;
+}
+
+.message-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  align-items: stretch;
+}
+
+.message-card {
+  background: linear-gradient(to right, #f3e5f5, #e1f5fe);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.message-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.message-card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.message-card p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.message-details {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.message-entry {
+  margin-bottom: 1rem;
+}
+
+.message-entry hr {
+  margin-top: 0.5rem;
+  border: none;
+  border-top: 1px dashed #bbb;
+}
+
+/* Context Menu */
+.context-menu {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 0.5rem 0;
+  z-index: 1000;
+  width: 140px;
+}
+
+.context-menu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.context-menu li:hover {
+  background-color: #f0f0f0;
+}
