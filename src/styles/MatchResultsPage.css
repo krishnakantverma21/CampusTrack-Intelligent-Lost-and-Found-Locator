@@ -1,0 +1,86 @@
+.match-results-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.match-card {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.match-card:hover {
+  transform: scale(1.02);
+}
+
+.match-card h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.match-card img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.match-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.match-view-btn,
+.match-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.match-view-btn {
+  background-color: #007bff;
+}
+
+.match-view-btn:hover {
+  background-color: #0056b3;
+}
+
+.match-btn {
+  background-color: #28a745;
+}
+
+.match-btn:hover {
+  background-color: #218838;
+}
+
+.confirmed-badge {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.match-pair {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}

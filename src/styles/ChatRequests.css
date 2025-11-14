@@ -1,0 +1,79 @@
+.chat-requests-panel {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid #ddd;
+}
+
+.chat-requests-panel h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.chat-request-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.chat-request-card:hover {
+  transform: scale(1.02);
+}
+
+.chat-request-card p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.chat-request-card button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.chat-request-card button:first-of-type {
+  background-color: #4caf50;
+  color: white;
+}
+
+.chat-request-card button:first-of-type:hover {
+  background-color: #45a049;
+}
+
+.chat-request-card button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+.chat-request-card button:last-of-type:hover {
+  background-color: #e53935;
+}
+
+@media (max-width: 600px) {
+  .chat-requests-panel {
+    padding: 1rem;
+  }
+
+  .chat-request-card {
+    padding: 0.8rem;
+  }
+
+  .chat-request-card button {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

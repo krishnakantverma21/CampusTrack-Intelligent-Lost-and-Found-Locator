@@ -1,0 +1,193 @@
+.admin-panel {
+  padding: 2rem;
+  background: linear-gradient(to right, #f1f8e9, #e0f2f1);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header with profile */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #a5d6a7, #80cbc4);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.admin-header h2 {
+  font-size: 2rem;
+  color: #1b5e20;
+  margin: 0;
+}
+
+.admin-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.admin-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #388e3c;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.admin-name {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #2e7d32;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.upload-label {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Section Containers */
+.analytics-section,
+.flagged-section,
+.admin-links-section {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+/* Gradient Section Headers */
+.section-header.gradient-header {
+  background: linear-gradient(to right, #a5d6a7, #80cbc4);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1b5e20;
+}
+
+/* Analytics Grid */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Enhanced Analytics Cards with Dark Glow */
+.analytics-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border-left: 6px solid #4caf50;
+}
+
+.analytics-card:nth-child(1) { border-left-color: #2e7d32; } /* Items Reported */
+.analytics-card:nth-child(2) { border-left-color: #0288d1; } /* Items Matched */
+.analytics-card:nth-child(3) { border-left-color: #f57c00; } /* Items Recovered */
+.analytics-card:nth-child(4) { border-left-color: #6a1b9a; } /* Active Users */
+.analytics-card:nth-child(5) { border-left-color: #c2185b; } /* Message Volume */
+
+.analytics-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Admin Tools Grid */
+.admin-tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.admin-tool-btn {
+  background: linear-gradient(135deg, #64b5f6, #81c784);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.admin-tool-btn:hover {
+  background: linear-gradient(135deg, #4fc3f7, #66bb6a);
+  box-shadow: 0 0 16px 4px rgba(102, 187, 106, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Flag Cards */
+.flag-card {
+  background: #ffffff;
+  border-left: 6px solid #ff7043;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.flag-card h4 {
+  margin: 0 0 0.5rem;
+  color: #d84315;
+}
+
+.flag-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.flag-card button {
+  margin-top: 0.5rem;
+  background: linear-gradient(135deg, #a8e6cf, #b2f2bb);
+  color: #064e3b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.flag-card button:hover {
+  background: linear-gradient(135deg, #86efac, #bbf7d0);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px 4px rgba(34, 197, 94, 0.4);
+}
+
+/* Error Text */
+.error-text {
+  color: #d32f2f;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}

@@ -1,0 +1,242 @@
+.auth-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  overflow: hidden;
+}
+
+.auth-illustration {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f4ff;
+  overflow: hidden;
+}
+
+.auth-illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.auth-form h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* ✨ Equal-sized inputs with glowing border */
+.auth-form input,
+.auth-form select {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border: 2px solid #00c853;
+  box-shadow: 0 0 8px #00c853;
+  outline: none;
+}
+
+.auth-form input::placeholder {
+  color: #666;
+}
+
+/* 🌿 Gradient green buttons */
+.blue-btn {
+  background: linear-gradient(to right, #00c853, #64dd17);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blue-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #64dd17;
+}
+
+/* 🌿 Gradient toggle buttons */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  background: linear-gradient(to right, #00c853, #64dd17);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toggle-buttons button.active {
+  box-shadow: 0 0 10px #64dd17;
+  transform: scale(1.05);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: rgb(232, 238, 239);
+  margin-bottom: 10px;
+}
+
+.remember-me input {
+  width: 20%;
+  margin-right: 3px;
+  transform: scale(1.5);
+}
+
+.success-msg {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔐 Password visibility toggle */
+.password-field {
+  position: relative;
+  margin-bottom: 15px;
+  width: 96%; /* ✅ Match other inputs */
+}
+
+.password-field input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 40px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.password-field input:focus {
+  border: 2px solid #00c853;
+  box-shadow: 0 0 8px #00c853;
+  outline: none;
+}
+
+.password-field span {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #00c853;
+  transition: transform 0.2s ease;
+}
+
+.password-field span:hover {
+  transform: scale(1.2);
+}
+
+/* 🧊 Animated transitions */
+.fade-login {
+  animation: fadeInLogin 0.5s ease-in-out;
+}
+
+.fade-signup {
+  animation: fadeInSignup 0.5s ease-in-out;
+}
+
+@keyframes fadeInLogin {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInSignup {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 768px) {
+  .auth-wrapper {
+    flex-direction: column;
+  }
+
+  .auth-illustration {
+    background-image: url('../assets/clg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  .auth-form {
+    padding: 20px;
+  }
+}

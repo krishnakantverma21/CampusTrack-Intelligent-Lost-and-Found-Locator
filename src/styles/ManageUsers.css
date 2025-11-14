@@ -1,0 +1,190 @@
+/* Header Section */
+.section-header.gradient-header {
+  background: linear-gradient(to right, #a5d6a7, #80cbc4);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1b5e20;
+}
+
+/* Grid Layout */
+.user-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  align-items: stretch;
+}
+
+/* User Card */
+.user-card {
+  background: linear-gradient(to right, #f3e5f5, #e1f5fe);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #64b5f6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin-bottom: 0.75rem;
+}
+
+.user-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.user-card p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+/* Option Buttons */
+.user-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.user-card button {
+  background: linear-gradient(135deg, #a8e6cf, #b2f2bb);
+  color: #064e3b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.user-card button:hover {
+  background: linear-gradient(135deg, #86efac, #bbf7d0);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px 4px rgba(34, 197, 94, 0.4);
+}
+
+/* Item and Message Name Lists */
+.item-name-list,
+.message-name-list {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  text-align: left;
+}
+
+.item-name,
+.message-name {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.item-name:hover,
+.message-name:hover {
+  color: #1b5e20;
+  text-decoration: underline;
+}
+
+/* Blur Overlay */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  z-index: 998;
+}
+
+/* Modal Containers */
+.item-modal,
+.message-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Content */
+.modal-content {
+  max-width: 500px;
+  width: 90%;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+}
+
+/* Item Image */
+.item-detail-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Text Details */
+.item-detail-container p,
+.message-detail-container p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.4rem 0;
+}
+
+.item-detail-container h3,
+.message-detail-container h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Delete Button */
+.edit-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffd54f;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #ffca28;
+  box-shadow: 0 0 12px 4px rgba(255, 213, 79, 0.4);
+}
