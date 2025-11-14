@@ -19,13 +19,14 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
             .csrf(csrf -> csrf.disable()) // ✅ Disable CSRF for APIs
-            .cors(cors -> {})             // ✅ Modern CORS config
+            .cors(cors -> {})             // ✅ Enable CORS
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
                     "/api/auth/**",
                     "/api/items/**",
                     "/api/chat/**",
-                    "/uploads/**",
+                    "/api/media/**",     // ✅ Allow media uploads
+                    "/uploads/**",       // ✅ Allow access to uploaded files
                     "/api/admin/**"
                 ).permitAll()
                 .anyRequest().authenticated()
@@ -41,7 +42,7 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(List.of("http://localhost:3001"));
 
         // ✅ Allow common HTTP methods
-        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS","PATCH"));
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
 
         // ✅ Allow all headers (including Authorization for JWT)
         configuration.setAllowedHeaders(List.of("*"));
